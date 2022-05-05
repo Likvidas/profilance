@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../../pages/Home/Home';
 import News from '../../pages/News/News';
-import { getIsShowModal } from '../../store/selectors';
+import { getIsShowModal } from '../../store/modal/selectors';
 import { Header } from '../Header/Header';
 import { Modal } from '../Modal/Modal';
 import { Popup } from '../Popup/Popup';

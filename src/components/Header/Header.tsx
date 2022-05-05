@@ -2,16 +2,23 @@ import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { LogoIcon } from '../Logo/LogoIcon';
+import { showModal } from '../../store/modal/actions';
+import { logOut } from '../../store/access/actions';
+import { getIsGuest } from '../../store/access/selectors';
 import css from './Header.module.scss';
-import { showModal } from '../../store/actions';
-import { getIsShowModal } from '../../store/selectors';
 
 export const Header: FC = () => {
-  const isShowModal = useSelector(getIsShowModal);
+  const isGuest = useSelector(getIsGuest);
   const dispatch = useDispatch();
-  const handlerClick = () => {
+
+  const onClickLogIn = () => {
     dispatch(showModal());
   };
+
+  const onClickLogOut = () => {
+    dispatch(logOut());
+  };
+
   return (
     <header className={css.header}>
       <Link to="/">
@@ -19,7 +26,8 @@ export const Header: FC = () => {
       </Link>
       <nav className={css.navigation}>
         <Link to="/news">Новости</Link>
-        <div onClick={handlerClick}>{!isShowModal ? 'Вход' : 'Выход'}</div>
+        {isGuest && <div onClick={onClickLogIn}>Вход</div>}
+        {!isGuest && <div onClick={onClickLogOut}>Выход</div>}
       </nav>
     </header>
   );

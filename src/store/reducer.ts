@@ -1,27 +1,15 @@
-import { HIDE_MODAL, SHOW_MODAL } from './actions';
-import { Actyons, GlobalStore } from './types';
+import { combineReducers } from 'redux';
+import { accessReducer } from './access/reducer';
+import { AccessStore } from './access/types';
+import { modalReducer } from './modal/reducer';
+import { ModalStore } from './modal/types';
 
-const initialState: GlobalStore = {
-  isShowModal: false,
-};
+export interface GlobalStore {
+  access: AccessStore;
+  modal: ModalStore;
+}
 
-export const rootReducer = (
-  state: GlobalStore = initialState,
-  actyon: Actyons,
-) => {
-  switch (actyon.type) {
-    case SHOW_MODAL:
-      return {
-        ...state,
-        isShowModal: true,
-      };
-    case HIDE_MODAL:
-      return {
-        ...state,
-        isShowModal: false,
-      };
-
-    default:
-      return state;
-  }
-};
+export const rootReducer = combineReducers({
+  access: accessReducer,
+  modal: modalReducer,
+});
