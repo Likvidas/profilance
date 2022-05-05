@@ -4,13 +4,16 @@
         "es2021": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:react-hooks/recommended",
-        "plugin:prettier/recommended",
-        "prettier",
-        "prettier/react"
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript",
+      "plugin:prettier/recommended",
+      "prettier",
+      "plugin:css-modules/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -23,8 +26,10 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "prettier"
+        "prettier",
+        "css-modules"
     ],
     "rules": {
+      "react/react-in-jsx-scope": "off"
     }
 }

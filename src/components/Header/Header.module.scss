@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  min-height: 120px;
+  padding: 0 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aquamarine;
+}
+
+.navigation {
+  display: flex;
+  column-gap: 20px;
+}
