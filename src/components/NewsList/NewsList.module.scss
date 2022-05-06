@@ -2,15 +2,11 @@
   display: flex;
   flex-flow: column nowrap;
   row-gap: 20px;
-  width: 90%;
-  min-height: 70vh;
-  border: 2px solid #000;
-  border-radius: 10px;
-  background-color: #d3d3d3;
   padding: 10px;
 }
 
 .title {
+  color: #c3cfe0;
   font-size: 30px;
   font-weight: bold;
 }

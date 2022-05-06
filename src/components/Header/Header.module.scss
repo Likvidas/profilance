@@ -1,10 +1,27 @@
 .header {
+  position: sticky;
   display: flex;
   min-height: 120px;
   padding: 0 40px;
   justify-content: space-between;
   align-items: center;
-  background-color: aquamarine;
+  background-color: #3d4d63;
+  border: 3px solid #696d7d66;
+  color: #c3cfe0;
+  font-weight: bold;
+  font-size: 18px;
+
+  a {
+    color: #c3cfe0;
+    text-decoration: none;
+  }
+
+  .navItem:hover {
+    transition: all 0.3s;
+    cursor: pointer;
+    transform: scale(1.1);
+    text-shadow: 0 0 20px #6f8bc7;
+  }
 }
 
 .navigation {

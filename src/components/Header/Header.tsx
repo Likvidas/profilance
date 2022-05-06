@@ -25,9 +25,19 @@ export const Header: FC = () => {
         <LogoIcon />
       </Link>
       <nav className={css.navigation}>
-        <Link to="/news">Новости</Link>
-        {isGuest && <div onClick={onClickLogIn}>Вход</div>}
-        {!isGuest && <div onClick={onClickLogOut}>Выход</div>}
+        <Link className={css.navItem} to="/news">
+          Новости
+        </Link>
+        {isGuest && (
+          <div className={css.navItem} onClick={onClickLogIn}>
+            Вход
+          </div>
+        )}
+        {!isGuest && (
+          <div className={css.navItem} onClick={onClickLogOut}>
+            Выход
+          </div>
+        )}
       </nav>
     </header>
   );

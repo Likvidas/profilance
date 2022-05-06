@@ -7,9 +7,9 @@ const initialState: ModalStore = {
 
 export const modalReducer = (
   state: ModalStore = initialState,
-  action: ModalAction,
+  { type }: ModalAction,
 ) => {
-  switch (action.type) {
+  switch (type) {
     case SHOW_MODAL:
       return {
         ...state,

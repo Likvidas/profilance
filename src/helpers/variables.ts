@@ -1,15 +1,9 @@
+import { News } from '../store/news/types';
+
 export const userLogin = 'User853';
 export const userPassword = 'SimSim63?';
 export const adminLogin = 'Admin378';
 export const adminPassword = 'mars43Q!?';
-
-export interface News {
-  id: string;
-  date: string;
-  title: string;
-  body: string;
-  isApproved: boolean;
-}
 
 export const mockNewsList: Array<News> = [
   {
