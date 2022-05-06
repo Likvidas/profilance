@@ -1,9 +1,13 @@
 import { ADDED_NEWS, DELETED_NEWS } from './actions';
 
-export type NewsActions = typeof ADDED_NEWS | typeof DELETED_NEWS;
+export interface DelNewsAction {
+  type: typeof DELETED_NEWS;
+  payload?: News;
+}
 
-export interface NewsAction {
-  type: NewsActions;
+export interface AddNewsAction {
+  type: typeof ADDED_NEWS;
+  payload: News;
 }
 
 export interface NewsStore {

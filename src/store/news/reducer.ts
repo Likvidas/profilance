@@ -1,6 +1,6 @@
 import { mockNewsList } from '../../helpers/variables';
 import { ADDED_NEWS, DELETED_NEWS } from './actions';
-import { NewsAction, NewsStore } from './types';
+import { AddNewsAction, DelNewsAction, NewsStore } from './types';
 
 const initialState: NewsStore = {
   newsList: mockNewsList,
@@ -8,12 +8,13 @@ const initialState: NewsStore = {
 
 export const newsReducer = (
   state: NewsStore = initialState,
-  { type }: NewsAction,
+  { type, payload }: AddNewsAction | DelNewsAction,
 ) => {
   switch (type) {
     case ADDED_NEWS:
       return {
         ...state,
+        newsList: [payload, ...state.newsList],
       };
     case DELETED_NEWS:
       return {
