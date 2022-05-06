@@ -1,13 +1,13 @@
-import { ADDED_NEWS, DELETED_NEWS } from './actions';
-
-export interface DelNewsAction {
-  type: typeof DELETED_NEWS;
-  payload?: News;
-}
+import { ADDED_NEWS, UPDATE_NEWS } from './actions';
 
 export interface AddNewsAction {
   type: typeof ADDED_NEWS;
   payload: News;
+}
+
+export interface UpdateNewsAction {
+  type: typeof UPDATE_NEWS;
+  payload: News[];
 }
 
 export interface NewsStore {

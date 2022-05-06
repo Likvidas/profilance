@@ -22,3 +22,27 @@
   font-size: 14px;
   color: #c3cfe0;
 }
+
+.btnGroup {
+  align-self: flex-end;
+  display: flex;
+  column-gap: 20px;
+}
+
+.btn {
+  align-self: flex-end;
+  padding: 10px 28px;
+  background-color: transparent;
+  border: 2px solid #eb6e6e;
+  color: #eb6e6e;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #eb6e6e;
+    color: #e0e0e0;
+    box-shadow: 0 0 15px #c73a3a;
+    transform: scale(1.1);
+  }
+}
