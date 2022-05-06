@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import { getIsGuest, getName } from '../../store/access/selectors';
-import css from './Home.module.scss';
+import css from './HomePage.module.scss';
 
-const Home: FC = () => {
+const HomePage: FC = () => {
   const userName = useSelector(getName);
   const isGuest = useSelector(getIsGuest);
 
@@ -14,4 +14,4 @@ const Home: FC = () => {
   );
 };
 
-export default Home;
+export default HomePage;
