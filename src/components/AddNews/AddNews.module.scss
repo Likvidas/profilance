@@ -7,10 +7,9 @@
   width: 100%;
 
   textarea {
-      resize: none;
-      min-height: 80px;
-    }
-
+    resize: none;
+    min-height: 80px;
+  }
 }
 
 .btn {
@@ -49,5 +48,4 @@
   &:hover {
     box-shadow: 0 0 20px #6f8bc7;
   }
-
 }
